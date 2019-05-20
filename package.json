@@ -1,0 +1,14 @@
+{
+  "name": "pga-react-leaderboard-api",
+  "version": "0.0.1",
+  "author": "@cdunnnnnnn",
+  "homepage": "https://github.com/cdunnnnnnn/pga-react-leaderboard-api",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.0",
+    "helmet": "^3.18.0",
+    "mongoose": "^5.5.10",
+    "serverless": "^1.43.0",
+    "serverless-http": "^2.0.2"
+  }
+}

@@ -1,0 +1,40 @@
+service: pga-react-leaderboard-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  app:
+    handler: server.run
+    events:
+      - http:
+          path: api/players
+          method: any
+          cors:
+            allowCredentials: true
+            origin: '*'
+            headers:
+              - accept
+              - Content-Type
+              - Origin
+              - User-Agent
+              - Referer
+      - http:
+          path: api/players/{id}
+          method: any
+          request:
+            parameters:
+              paths:
+                id: true
+          cors:
+            allowCredentials: true
+            origin: '*'
+            headers:
+              - accept
+              - Content-Type
+              - Origin
+              - User-Agent
+              - Referer
